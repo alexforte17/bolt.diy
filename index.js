@@ -11,9 +11,7 @@ export class MyDurableObject {
 
 export default {
   async fetch(req, env) {
-    const worker = env.dispatcher.get("my-github-worker");
+    const worker = env.dispatcher.get('my-github-worker');
     return worker.fetch(req);
-  },
+  }
 };
-
-export { MyDurableObject };
